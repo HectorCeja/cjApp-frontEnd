@@ -1,28 +1,36 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app" class="container-fluid">
+        <div class="site-info">
+            <h1>cjApp</h1>
+            <h3>Vue SpringBoot example</h3>
+        </div>
+        <nav>
+            <router-link class="btn btn-primary" to="/">Personajes</router-link>
+            <router-link class="btn btn-primary" to="/add">Agregar</router-link>
+            <router-link class="btn btn-primary" to="/search">Buscar</router-link>
+        </nav>
+        <br/>
+        <router-view/>
+    </div>
 </template>
-
+ 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+  name: "app"
+};
 </script>
-
+ 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.site-info {
+  color: blue;
+  margin-bottom: 20px;
+}
+ 
+.btn-primary {
+  margin-right: 5px;
+}
+ 
+.container-fluid {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
