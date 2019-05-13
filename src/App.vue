@@ -1,8 +1,7 @@
 <template>
     <div id="app" class="container-fluid">
         <div class="site-info">
-            <h1>cjApp</h1>
-            <h3>Vue SpringBoot example</h3>
+            <h1>WikiThrones</h1>
         </div>
         <nav>
             <router-link class="btn btn-primary" to="/">Personajes</router-link>

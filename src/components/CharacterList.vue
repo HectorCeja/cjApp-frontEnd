@@ -2,8 +2,8 @@
     <div class="list row">
         <div class="col-md-6">
             <h4>Characters List</h4>
-            <ul>
-                <li v-for="(character, index) in characters" :key="index">
+            <div class="list-group">
+                <button type="button" class="btn btn-light" v-for="(character, index) in characters" :key="index">
                     <router-link :to="{
                             name: 'character-details',
                             params: { 
@@ -18,8 +18,8 @@
                             {{character.name}}
                             {{character.age}}
                     </router-link>
-                </li>
-            </ul>
+                </button>
+            </div>
         </div>
         <div class="col-md-6">
             <router-view @refreshData="refreshList"></router-view>

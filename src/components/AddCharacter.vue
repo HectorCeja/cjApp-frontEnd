@@ -1,5 +1,11 @@
 <template>
   <div class="submitform">
+    <div v-if="errors.length">
+    <b>Please correct the following error(s):</b>
+    <ul>
+      <li v-for="(error,index) in errors" :key="index">{{ error }}</li>
+    </ul>
+    </div>
     <div v-if="!submitted">
         <div class="form-group">
           <label for="name">Name</label>
@@ -79,6 +85,12 @@ export default {
     newCharacter() {
       this.submitted = false;
       this.character = {};
+    },
+    errors(){
+      this.errors = [];
+      if (!this.character.name) {
+          this.errors.push('Name required.');
+      }
     }
   }
 };
