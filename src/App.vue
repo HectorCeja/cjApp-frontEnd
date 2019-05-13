@@ -1,12 +1,19 @@
 <template>
     <div id="app" class="container-fluid">
-        <div class="site-info">
-            <h1>WikiThrones</h1>
-        </div>
-        <nav>
-            <router-link class="btn btn-primary" to="/">Personajes</router-link>
-            <router-link class="btn btn-primary" to="/add">Agregar</router-link>
-            <router-link class="btn btn-primary" to="/search">Buscar</router-link>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="" id="logoFontTitle"> 
+              <img src="./assets/wolf.png" width="40" height="40" class="d-inline-block align-top" alt="">
+              WikiThrones
+            </a>
+            <router-link tag="a" class="black nav-item nav-link active font-white" to="/">
+            Personajes
+            </router-link>
+            <router-link tag="a" class="nav-item nav-link active font-white" to="/add">
+            Agregar
+            </router-link>
+            <router-link tag="a" class="nav-item nav-link active font-white" to="/search">
+            Buscar
+            </router-link>
         </nav>
         <br/>
         <router-view/>
@@ -23,6 +30,14 @@ export default {
 .site-info {
   color: blue;
   margin-bottom: 20px;
+}
+
+#logoFontTitle{
+  font-size: 25px;
+}
+
+.font-white{
+  color: white;
 }
  
 .btn-primary {
