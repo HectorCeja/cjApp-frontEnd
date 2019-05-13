@@ -6,7 +6,14 @@
                 <li v-for="(character, index) in characters" :key="index">
                     <router-link :to="{
                             name: 'character-details',
-                            params: { name: character.name, id: character.id }
+                            params: { 
+                              name: character.name, 
+                              id: character.id,
+                              status: character.status,
+                              age: character.age,
+                              description: character.description,
+                              imageUrl: character.imageUrl
+                              }
                         }">
                             {{character.name}}
                             {{character.age}}
@@ -33,7 +40,7 @@ export default {
   methods: {
     retrieveCharacters() {
       http
-        .get("personajes/get-alives?status=ALIVE")
+        .get("personajes/get-all")
         .then(response => {
           this.characters = response.data; // JSON are parsed automatically.
           console.log(response.data);
