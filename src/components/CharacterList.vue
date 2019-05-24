@@ -40,7 +40,7 @@ export default {
   methods: {
     retrieveCharacters() {
       http
-        .get("personajes/get-all")
+        .get("characters/get-all")
         .then(response => {
           this.characters = response.data; // JSON are parsed automatically.
           console.log(response.data);

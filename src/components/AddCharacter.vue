@@ -71,7 +71,7 @@ export default {
       };
 
       http
-        .post("/personajes/save", data)
+        .post("/characters/save", data)
         .then(response => {
           this.character.id = response.data.id;
           console.log(response.data);
@@ -169,7 +169,7 @@ export default {
       };
  
       http
-        .post("/personajes/save", data)
+        .post("/characters/save", data)
         .then(response => {
           this.character.id = response.data.id;
           console.log(response.data);

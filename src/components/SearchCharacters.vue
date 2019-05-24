@@ -32,7 +32,7 @@ export default {
     
     searchCharacters() {
       http
-        .get("/personajes/getByAge?age=" + this.age)
+        .get("/characters/getByAge?age=" + this.age)
         .then(response => {
           this.characters = response.data; // JSON are parsed automatically.
           console.log(response.data);

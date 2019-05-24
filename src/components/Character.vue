@@ -48,7 +48,7 @@ export default {
       };
  
       http
-        .put("/personajes/update/" + this.$route.params.id, data)
+        .put("/characters/update/" + this.$route.params.id, data)
         .then(response => {
           this.$route.params.status = response.data.status;
           this.$emit("refreshData");
@@ -61,7 +61,7 @@ export default {
     },
     deleteCharacter() {
       http
-        .delete("/personajes/delete/" + this.$route.params.id)
+        .delete("/characters/delete/" + this.$route.params.id)
         .then(response => {
           console.log(response.data);
           this.$emit("refreshData");

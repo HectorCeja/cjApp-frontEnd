@@ -6,13 +6,13 @@
               WikiThrones
             </a>
             <router-link tag="a" class="black nav-item nav-link active font-white" to="/">
-            Personajes
+            Characters
             </router-link>
             <router-link tag="a" class="nav-item nav-link active font-white" to="/add">
-            Agregar
+            Add
             </router-link>
             <router-link tag="a" class="nav-item nav-link active font-white" to="/search">
-            Buscar
+            Find
             </router-link>
         </nav>
         <br/>
